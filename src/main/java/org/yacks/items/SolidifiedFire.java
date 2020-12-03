@@ -15,10 +15,17 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
-
+/**
+ * an item that plays random messages when you hold it.
+ * Im well aware there is no logic in having solid fire but your in a world where holding
+ * 6082560 kilograms is just as easy as holding 1856 feathers.
+ */
 public class SolidifiedFire extends Item {
 
-    // this gets a list of all messages from the lang file
+    /**
+     * A list of all the possible chat messages
+     * @see net.minecraft.client.resources.I18n
+     */
     private String[] messages = { I18n.format("messages.whosidea.solid_fire.1"),
             I18n.format("messages.whosidea.solid_fire.2"), I18n.format("messages.whosidea.solid_fire.3"),
             I18n.format("messages.whosidea.solid_fire.4"), I18n.format("messages.whosidea.solid_fire.5") };
@@ -31,6 +38,9 @@ public class SolidifiedFire extends Item {
 
     }
 
+    /**
+     * called every tick its in the players inventory, sets player on fire and if its held play a random chat message
+     */
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         // sets the entity that has it in inventory on fire for 15 ticks
@@ -52,7 +62,6 @@ public class SolidifiedFire extends Item {
     }
 
     /**
-     * 
      * @return any random from the messages variable
      */
     private String random_message() {

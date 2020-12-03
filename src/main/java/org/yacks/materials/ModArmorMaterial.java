@@ -11,7 +11,10 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
 public enum ModArmorMaterial implements IArmorMaterial {
-    
+    /**
+     * Armour Material for hell crystal.
+     * @see org.yacks.items.SolidifiedFire
+     */
     HELL_CRYSTAL("whosidea:hell_crystal", 45, new int[] { 20, 50, 60, 20 }, 50,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0f, () -> { return Ingredient.fromItems(RegistryHandler.SOLID_FIRE.get()); }, 1.0f);
 
