@@ -1,0 +1,15 @@
+{
+    "item.whosidea.solid_fire" : "Solid fire",
+    "messages.whosidea.solid_fire.1": "What next solid stone wont need supports",
+    "messages.whosidea.solid_fire.2": "You cant Solidify a gas?",
+    "messages.whosidea.solid_fire.3": "This item doesnt need logic",
+    "messages.whosidea.solid_fire.4": "lets burn some trees",
+    "messages.whosidea.solid_fire.5": "lets melt some gold",
+
+    "item.whosidea.hell_crystal_helmet" : "Hell Crystal Helmet",
+    "item.whosidea.hell_crystal_chestplate" : "Hell Crystal Chestplate",
+    "item.whosidea.hell_crystal_leggings" : "Hell Crystal Legs",
+    "item.whosidea.hell_crystal_boots" : "Hell Crystal Shoes",
+
+    "item.whosidea.sharp_soft": "Softy"
+}
