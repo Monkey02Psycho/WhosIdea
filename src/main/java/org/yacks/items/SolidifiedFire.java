@@ -1,12 +1,7 @@
 package org.yacks.items;
 
-import java.util.List;
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
-import net.minecraft.client.resources.I18n;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,8 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 /**
  * an item that plays random messages when you hold it. Im well aware there is
@@ -59,13 +52,6 @@ public class SolidifiedFire extends Item {
             entityIn.sendMessage(random_message(), entityIn.getUniqueID());
         }
 
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip,
-            ITooltipFlag flagIn) {
-        // this adds the description to the item.
-        tooltip.add(ITextComponent.getTextComponentOrEmpty(I18n.format("desc.whosidea.solid_fire")));
     }
 
     /**

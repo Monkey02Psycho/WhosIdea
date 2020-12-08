@@ -11,5 +11,7 @@
     "item.whosidea.hell_crystal_leggings" : "Hell Crystal Legs",
     "item.whosidea.hell_crystal_boots" : "Hell Crystal Shoes",
 
-    "item.whosidea.sharp_soft": "Softy"
+    "item.whosidea.sharp_soft": "Softy",
+    "block.whosidea.life_adder": "Life adder",
+    "block.minecraft.stone.desc": "Whoo Im stoned"
 }
