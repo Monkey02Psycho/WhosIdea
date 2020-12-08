@@ -55,7 +55,7 @@ public class SolidifiedFire extends Item {
          * if a randomly made number is 0 and the item is selected then It will put a
          * random message in chat
          */
-        if (isSelected && random.nextInt(100) == 0) {
+        if (!worldIn.isRemote && isSelected && random.nextInt(100) == 0) {
             entityIn.sendMessage(random_message(), entityIn.getUniqueID());
         }
 
