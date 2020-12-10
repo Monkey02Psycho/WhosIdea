@@ -3,6 +3,7 @@ package org.yacks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -15,6 +16,9 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.yacks.capabilities.IMagic;
+import org.yacks.capabilities.Magic;
+import org.yacks.capabilities.MagicStorage;
 import org.yacks.util.RegistryHandler;
 
 import java.util.stream.Collectors;
@@ -49,6 +53,8 @@ public class WhosIdea {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        // Registers the Capability. 
+        CapabilityManager.INSTANCE.register(IMagic.class, new MagicStorage(), () -> new Magic());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
