@@ -1,12 +1,14 @@
 package org.yacks.events;
 
+import org.yacks.SimpleGUI;
 import org.yacks.WhosIdea;
 import org.yacks.capabilities.IMagic;
 import org.yacks.capabilities.Magic;
 import org.yacks.capabilities.MagicProvider;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.TranslationTextComponent;
-
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,4 +29,11 @@ public class CommonEvents {
         }
     }
 
+    // @SubscribeEvent
+    // public static void guiRender(RenderGameOverlayEvent.Post event){
+    //     if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT){
+    //         return;
+    //     }
+    //     new SimpleGUI(Minecraft.getInstance(), event.getMatrixStack());
+    // }
 }
